@@ -19,6 +19,7 @@ public class DashboardParent extends AppCompatActivity {
 
         Button parentlogoutbutton = (Button) findViewById(R.id.parentlogoutbutton);
         TextView tvnotifyabsent = (TextView) findViewById(R.id.tvnotifyabsent);
+        TextView tvbusstatus = (TextView) findViewById(R.id.tvbusstatus);
 
         parentlogoutbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +33,13 @@ public class DashboardParent extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DashboardParent.this,Absentee.class);
+                startActivity(intent);
+            }
+        });
+        tvbusstatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardParent.this,MapsActivity.class);
                 startActivity(intent);
             }
         });
